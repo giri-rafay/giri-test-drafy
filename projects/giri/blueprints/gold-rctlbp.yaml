@@ -24,5 +24,5 @@ spec:
   driftWebhook:
     enabled: true
   type: golden
-  version: v1
+  version: v2
   versionState: draft
