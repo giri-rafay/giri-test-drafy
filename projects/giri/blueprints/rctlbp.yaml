@@ -1,0 +1,28 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: rctlbp
+  project: giri
+spec:
+  base:
+    name: minimal
+    version: 3.2.0
+  customAddons:
+  - name: ui-addon
+    version: v1
+  - name: git1-addon
+    version: v1
+  defaultAddons:
+    csiSecretStoreConfig:
+      providers: {}
+    enableIngress: true
+    enableMonitoring: true
+    enableVM: true
+    monitoring:
+      gpuOperator:
+        enabled: true
+  driftWebhook:
+    enabled: true
+  type: custom
+  version: v1
+  versionState: draft
